@@ -43,6 +43,7 @@
       "src/services/voice-service.js",
       "src/services/context-service.js",
       "src/services/model-delegation-service.js",
+      "src/content/hover-box.js",
       "src/content/content.js"
     ],
     "run_at": "document_end"
