@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autonomi Executive Assistant</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <h2>Autonomi Executive Assistant</h2>
+        
+        <div class="usage-section">
+            <h3>Usage</h3>
+            <p>Remaining free credits: <span id="usagetracker">--</span>/25</p>
+        </div>                    
+
+        <div class="settings-section">
+            <h3>Settings</h3>
+            <label>
+                <input type="checkbox" id="voiceEnabled" checked>
+                Enable voice input
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button id="clearHistory">Clear Chat History</button>
+            <button id="resetUsage">Reset Credits</button>
+            <button id="openSidebar" class="primary-button">Open Assistant</button>
+        </div>
+
+        <div class="footer">
+            <a href="https://getautonomi.com" target="_blank">
+                Visit getautonomi.com for unlimited access
+            </a>
+        </div>
+    </div>
+
+    <!-- Load service scripts first -->
+    <script src="../src/services/usage-tracker.js"></script>
+    <script src="../src/services/memory-service.js"></script>
+    <script src="../src/services/ai-service.js"></script>
+    <script src="../src/services/voice-service.js"></script>
+    <script src="../src/services/context-service.js"></script>
+    
+    <!-- Load popup script last -->
+    <script src="popup.js"></script>
+</body>
+</html>

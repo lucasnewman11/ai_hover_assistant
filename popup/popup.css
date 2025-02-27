@@ -1,0 +1,98 @@
+body {
+    width: 300px;
+    padding: 15px;
+    background: rgba(30, 30, 30, 0.9) !important; /* Match sidebar background */
+    color: white !important;
+    font-family: Arial, sans-serif;
+}
+
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h2 {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+
+.usage-section, .settings-section {
+    background: rgba(45, 45, 45, 0.8) !important; /* Match sidebar tones */
+    color: white !important; /* Ensure text is readable */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.model-preference {
+    margin-top: 10px;
+}
+
+.model-preference p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    color: white !important; /* White text for radio/checkbox labels */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: rgba(255, 255, 255, 0.8); /* Optional: Customize radio/checkbox colors */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+button {
+    flex: 1; /* Make all buttons the same size */
+    padding: 12px;
+    border-radius: 6px;
+    background: rgba(30, 30, 30, 0.9) !important;
+    color: white !important;
+    border: 1px solid rgba(61, 61, 61, 0.8) !important;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+}
+
+button:hover {
+    background: rgba(45, 45, 45, 0.95) !important;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.footer a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
