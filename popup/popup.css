@@ -1,0 +1,232 @@
+/* Scoped styles for popup only */
+body {
+    width: 300px;
+    padding: 15px;
+    background: rgba(30, 30, 30, 0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popup-container h2 {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.popup-container h3 {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+
+.popup-container .usage-section,
+.popup-container .settings-section {
+    background: rgba(45, 45, 45, 0.8);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.popup-container .model-preference {
+    margin-top: 10px;
+}
+
+.popup-container .model-preference p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.popup-container label {
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
+}
+
+.popup-container input[type="radio"] + label,
+.popup-container input[type="checkbox"] + label {
+    color: white;
+}
+
+.popup-container input[type="radio"],
+.popup-container input[type="checkbox"] {
+    accent-color: rgba(255, 255, 255, 0.8);
+}
+
+.popup-container .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.popup-container button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    background: rgba(30, 30, 30, 0.9);
+    color: white;
+    border: 1px solid rgba(61, 61, 61, 0.8);
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+}
+
+.popup-container button:hover {
+    background: rgba(45, 45, 45, 0.95);
+}
+
+.popup-container button.primary-button {
+    background: #4a90e2;
+    border-color: #357abd;
+}
+
+.popup-container button.primary-button:hover {
+    background: #357abd;
+}
+
+.popup-container button.secondary-button {
+    background: rgba(50, 50, 50, 0.9);
+    border-color: rgba(80, 80, 80, 0.8);
+    margin-top: 8px;
+}
+
+.popup-container .footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.popup-container .footer a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.popup-container .footer a:hover {
+    text-decoration: underline;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: rgba(30, 30, 30, 0.95);
+    color: white;
+    margin: 10% auto;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: white;
+}
+
+.modal-body {
+    padding: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: white;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background: rgba(45, 45, 45, 0.8);
+    color: white;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.form-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.error-message {
+    display: none;
+    background-color: rgba(211, 47, 47, 0.2);
+    color: #ff6060;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(211, 47, 47, 0.3);
+}
+
+.success-message {
+    display: none;
+    background-color: rgba(56, 142, 60, 0.2);
+    color: #81c784;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(56, 142, 60, 0.3);
+}

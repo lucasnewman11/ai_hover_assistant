@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Hover Assistant</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <h2>AI Hover Assistant</h2>
+        
+        <div class="usage-section">
+            <h3>Usage</h3>
+            <p>Remaining free credits: <span id="usagetracker">--</span>/25</p>
+        </div>                    
+
+        <div class="settings-section">
+            <h3>Settings</h3>
+            <label>
+                <input type="checkbox" id="voiceEnabled" checked>
+                Enable voice input
+            </label>
+            <button id="configureApiKeys" class="secondary-button">Configure API Keys</button>
+        </div>
+
+        <div class="buttons">
+            <button id="clearHistory">Clear Chat History</button>
+            <button id="resetUsage">Reset Credits</button>
+            <button id="openSidebar" class="primary-button">Open Assistant</button>
+        </div>
+
+        <div class="footer">
+            <a href="https://getautonomi.com" target="_blank">
+                Visit getautonomi.com for unlimited access
+            </a>
+        </div>
+    </div>
+    
+    <!-- API Key Modal -->
+    <div id="apiKeyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Configure API Keys</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="apiKeyForm">
+                    <div class="form-group">
+                        <label for="claudeKey">Claude API Key</label>
+                        <input type="password" id="claudeKey" placeholder="Enter Claude API key" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="perplexityKey">Perplexity API Key</label>
+                        <input type="password" id="perplexityKey" placeholder="Enter Perplexity API key" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="openaiKey">OpenAI API Key (Optional)</label>
+                        <input type="password" id="openaiKey" placeholder="Enter OpenAI API key">
+                    </div>
+                    <div id="keyError" class="error-message"></div>
+                    <div id="keySuccess" class="success-message">Keys updated successfully!</div>
+                    <div class="form-actions">
+                        <button type="submit" class="primary-button">Save Keys</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load service scripts first -->
+    <script src="../src/services/usage-tracker.js"></script>
+    <script src="../src/services/memory-service.js"></script>
+    <script src="../src/services/ai-service.js"></script>
+    <script src="../src/services/voice-service.js"></script>
+    <script src="../src/services/context-service.js"></script>
+    
+    <!-- Load popup script last -->
+    <script src="popup.js"></script>
+</body>
+</html>
